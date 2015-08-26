@@ -253,3 +253,41 @@ staging:
 
 production:
   <<: *defaults
+
+basemaps:
+    CartoDB:
+      positron_rainbow:
+        default: true
+        url: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png' 
+        subdomains: 'abcd' 
+        minZoom: '0' 
+        maxZoom: '18' 
+        name: 'Positron' 
+        className: 'positron_rainbow' 
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href= "http://cartodb.com/attributions#basemaps">CartoDB</a>' 
+      dark_matter_rainbow:
+        url: 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png' 
+        subdomains: 'abcd' 
+        minZoom: '0' 
+        maxZoom: '18' 
+        name: 'Dark matter' 
+        className: 'dark_matter_rainbow' 
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="http://cartodb.com/attributions#basemaps">CartoDB</a>' 
+      positron_lite_rainbow:
+        url: 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png' 
+        subdomains: 'abcd' 
+        minZoom: '0' 
+        maxZoom: '18' 
+        name: 'Positron (lite)' 
+        className: 'positron_lite_rainbow' 
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="http://cartodb.com/attributions#basemaps">CartoDB</a>' 
+
+    stamen:
+      toner_stamen:
+        url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png' 
+        subdomains: 'abcd' 
+        minZoom: '0' 
+        maxZoom: '18' 
+        name: 'Toner' 
+        className: 'toner_stamen' 
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.' 
